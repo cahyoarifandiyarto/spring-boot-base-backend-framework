@@ -29,6 +29,13 @@
         <springdoc-openapi-ui.version>1.6.4</springdoc-openapi-ui.version>
     </properties>
 
+    <developers>
+        <developer>
+            <name>Cahyo Arif Andiyarto</name>
+            <email>cahyoarif.dev@gmail.com</email>
+        </developer>
+    </developers>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -58,5 +65,22 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
