@@ -10,6 +10,7 @@
         <module>backend-framework-validation</module>
         <module>backend-framework-common</module>
         <module>backend-framework-data-jpa-repository</module>
+        <module>backend-framework-sleuth</module>
     </modules>
 
     <parent>
@@ -27,6 +28,7 @@
         <java.version>11</java.version>
         <backend-framework.version>${project.version}</backend-framework.version>
         <springdoc-openapi-ui.version>1.6.4</springdoc-openapi-ui.version>
+        <spring-cloud.version>2021.0.0</spring-cloud.version>
     </properties>
 
     <developers>
@@ -59,9 +61,21 @@
                 <version>${backend-framework.version}</version>
             </dependency>
             <dependency>
+                <groupId>id.backend.framework</groupId>
+                <artifactId>backend-framework-sleuth</artifactId>
+                <version>${backend-framework.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc-openapi-ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
