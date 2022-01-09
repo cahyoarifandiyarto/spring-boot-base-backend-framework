@@ -20,7 +20,7 @@ public class TracerCustom implements Filter {
         Span currentSpan = tracer.currentSpan();
         if (currentSpan != null) {
             HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
-            httpServletResponse.addHeader("traceId", currentSpan.context().traceId());
+            httpServletResponse.addHeader("Trace-Id", currentSpan.context().traceId());
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
